@@ -1,0 +1,85 @@
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+  [1m[35m (62.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+  [1m[35m (63.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+Migrating to CreatePotlucksTable (20181229225626)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "potlucks_tables" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL)[0m
+  ↳ db/migrate/20181229225626_create_potlucks_table.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181229225626"]]
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+  [1m[35m (45.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+  [1m[36mActiveRecord::InternalMetadata Create (8.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-12-29 22:59:11.386709"], ["updated_at", "2018-12-29 22:59:11.386709"]]
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+  [1m[35m (62.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+Migrating to CreatePotlucks (20181229230653)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20181229230653_create_potlucks.rb:3
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "potlucks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "date" varchar, "time" varchar, "location" varchar, "description" varchar)[0m
+  ↳ db/migrate/20181229230653_create_potlucks.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181229230653"]]
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+  [1m[35m (28.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mPotluck Create (5.4ms)[0m  [1m[32mINSERT INTO "potlucks" ("name", "date", "time", "location", "description") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Araba Bday Dinner"], ["date", "January 28th, 2019"], ["time", "8 pm"], ["location", "Brooklyn"], ["description", "chill event, foods of the world themed, bring your favorites"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (37.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mPotluck Create (2.7ms)[0m  [1m[32mINSERT INTO "potlucks" ("name", "date", "time", "location", "description") VALUES (?, ?, ?, ?, ?)[0m  [["name", "New Years Dinner"], ["date", "December 31, 20189"], ["time", "9 pm"], ["location", "Alex's Apartment"], ["description", "let's bring in the new year with a potluck!"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (43.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+Migrating to DropPotlucksTable (20181229231022)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+  [1m[35m (3.1ms)[0m  [1m[35mDROP TABLE "potlucks_tables"[0m
+  ↳ db/migrate/20181229231022_drop_potlucks_table.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181229231022"]]
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+  [1m[35m (41.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22

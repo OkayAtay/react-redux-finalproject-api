@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Potluck.create([
+  {name: 'Araba Bday Dinner', date: 'January 28th, 2019', time: '8 pm', location: 'Brooklyn', description: 'chill event, foods of the world themed, bring your favorites'},
+  {name: 'New Years Dinner', date: 'December 31, 20189', time: '9 pm', location: "Alex's Apartment", description: "let's bring in the new year with a potluck!"}])
