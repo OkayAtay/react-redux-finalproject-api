@@ -1,9 +1,4 @@
 {
-<<<<<<< HEAD
-  "name": "railsAPI",
-  "private": true,
-  "dependencies": {}
-=======
   "name": "react-redux-potluck-api",
   "version": "0.1.0",
   "private": true,
