@@ -1,3 +1,7 @@
-class ApplicationController < ActionController::Base
-  respond_to :json
+class ApplicationController < ActionController::API
+
+  def index
+    render json: {message: "successful", status: 200}
+  end
+
 end

@@ -1,13 +1,13 @@
 class Api::V1::PotlucksController < ApplicationController
 
   def index
-    potlucks = potlucks.all
+    potlucks = Potluck.all
 
     render json: potlucks
   end
 
   def create
-    potluck = potlucks.build(potluck_params)
+    potluck = Potluck.build(potluck_params)
     potluck.save
 
     render json: potluck
@@ -23,7 +23,7 @@ class Api::V1::PotlucksController < ApplicationController
   private
 
   def potluck_params
-    params.requeire(:potluck).permit(
+    params.require(:potluck).permit(
        :name,
        :date,
        :time,
