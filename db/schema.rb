@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_29_231022) do
+ActiveRecord::Schema.define(version: 2018_12_30_172709) do
 
   create_table "potlucks", force: :cascade do |t|
     t.string "name"
@@ -18,6 +18,14 @@ ActiveRecord::Schema.define(version: 2018_12_29_231022) do
     t.string "time"
     t.string "location"
     t.string "description"
+  end
+
+  create_table "recipes", force: :cascade do |t|
+    t.integer "potluck_id"
+    t.string "name"
+    t.string "description"
+    t.string "category"
+    t.index ["potluck_id"], name: "index_recipes_on_potluck_id"
   end
 
 end

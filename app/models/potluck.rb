@@ -1,3 +1,3 @@
 class Potluck < ApplicationRecord
-  # write has_many :recipes here
+  has_many :recipes
 end

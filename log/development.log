@@ -826,3 +826,126 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+Migrating to CreateRecipes (20181230172709)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20181230172709_create_recipes.rb:3
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "recipes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "potluck_id" integer, "name" varchar, "description" varchar, "category" varchar)[0m
+  ↳ db/migrate/20181230172709_create_recipes.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_recipes_on_potluck_id" ON "recipes" ("potluck_id")[0m
+  ↳ db/migrate/20181230172709_create_recipes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181230172709"]]
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+  [1m[35m (33.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mPotluck Create (2.4ms)[0m  [1m[32mINSERT INTO "potlucks" ("name", "date", "time", "location", "description") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Araba Bday Dinner"], ["date", "January 28th, 2019"], ["time", "8 pm"], ["location", "Brooklyn"], ["description", "chill event, foods of the world themed, bring your favorites"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (47.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mPotluck Create (3.0ms)[0m  [1m[32mINSERT INTO "potlucks" ("name", "date", "time", "location", "description") VALUES (?, ?, ?, ?, ?)[0m  [["name", "New Years Dinner"], ["date", "December 31, 20189"], ["time", "9 pm"], ["location", "Alex's Apartment"], ["description", "let's bring in the new year with a potluck!"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (38.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mPotluck Load (0.6ms)[0m  [1m[34mSELECT  "potlucks".* FROM "potlucks" WHERE "potlucks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mRecipe Create (2.2ms)[0m  [1m[32mINSERT INTO "recipes" ("potluck_id", "name", "description", "category") VALUES (?, ?, ?, ?)[0m  [["potluck_id", 1], ["name", "lasagna"], ["description", "creamy pasta dish with red sauce and ricotta cheese"], ["category", "main"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (66.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPotluck Load (0.5ms)[0m  [1m[34mSELECT  "potlucks".* FROM "potlucks" WHERE "potlucks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mRecipe Create (2.3ms)[0m  [1m[32mINSERT INTO "recipes" ("potluck_id", "name", "description", "category") VALUES (?, ?, ?, ?)[0m  [["potluck_id", 1], ["name", "pork pasteles"], ["description", "dish from PR made from green banana and pork"], ["category", "main"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (39.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mPotluck Load (0.6ms)[0m  [1m[34mSELECT  "potlucks".* FROM "potlucks" WHERE "potlucks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mRecipe Create (3.1ms)[0m  [1m[32mINSERT INTO "recipes" ("potluck_id", "name", "description", "category") VALUES (?, ?, ?, ?)[0m  [["potluck_id", 1], ["name", "Rum Cake"], ["description", "Bahamian style Rum cake with ground pecans on the bottom"], ["category", "dessert"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (73.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/Araba/.rvm/gems/ruby-2.3.4/bin/rake:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mPotluck Create (1.8ms)[0m  [1m[32mINSERT INTO "potlucks" ("name", "date", "time", "location", "description") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Araba Bday Dinner"], ["date", "January 28th, 2019"], ["time", "8 pm"], ["location", "Brooklyn"], ["description", "chill event, foods of the world themed, bring your favorites"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (24.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mPotluck Create (2.1ms)[0m  [1m[32mINSERT INTO "potlucks" ("name", "date", "time", "location", "description") VALUES (?, ?, ?, ?, ?)[0m  [["name", "New Years Dinner"], ["date", "December 31, 20189"], ["time", "9 pm"], ["location", "Alex's Apartment"], ["description", "let's bring in the new year with a potluck!"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (35.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mPotluck Load (0.5ms)[0m  [1m[34mSELECT  "potlucks".* FROM "potlucks" WHERE "potlucks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mRecipe Create (1.7ms)[0m  [1m[32mINSERT INTO "recipes" ("potluck_id", "name", "description", "category") VALUES (?, ?, ?, ?)[0m  [["potluck_id", 1], ["name", "lasagna"], ["description", "creamy pasta dish with red sauce and ricotta cheese"], ["category", "main"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (51.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPotluck Load (0.4ms)[0m  [1m[34mSELECT  "potlucks".* FROM "potlucks" WHERE "potlucks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mRecipe Create (2.1ms)[0m  [1m[32mINSERT INTO "recipes" ("potluck_id", "name", "description", "category") VALUES (?, ?, ?, ?)[0m  [["potluck_id", 1], ["name", "pork pasteles"], ["description", "dish from PR made from green banana and pork"], ["category", "main"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (45.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mPotluck Load (0.3ms)[0m  [1m[34mSELECT  "potlucks".* FROM "potlucks" WHERE "potlucks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mRecipe Create (2.8ms)[0m  [1m[32mINSERT INTO "recipes" ("potluck_id", "name", "description", "category") VALUES (?, ?, ?, ?)[0m  [["potluck_id", 1], ["name", "Rum Cake"], ["description", "Bahamian style Rum cake with ground pecans on the bottom"], ["category", "dessert"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (43.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mPotluck Load (0.3ms)[0m  [1m[34mSELECT  "potlucks".* FROM "potlucks" WHERE "potlucks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mRecipe Create (2.0ms)[0m  [1m[32mINSERT INTO "recipes" ("potluck_id", "name", "description", "category") VALUES (?, ?, ?, ?)[0m  [["potluck_id", 2], ["name", "Champagne"], ["description", "Bubbly beverage to set the mood"], ["category", "beverage"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (38.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mPotluck Load (0.4ms)[0m  [1m[34mSELECT  "potlucks".* FROM "potlucks" WHERE "potlucks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mRecipe Create (1.7ms)[0m  [1m[32mINSERT INTO "recipes" ("potluck_id", "name", "description", "category") VALUES (?, ?, ?, ?)[0m  [["potluck_id", 2], ["name", "Chips & Salsa"], ["description", "Chips & Salsa and maybe some homemade guac-- expect some spice"], ["category", "appetizer"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (65.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[36mPotluck Load (0.4ms)[0m  [1m[34mSELECT  "potlucks".* FROM "potlucks" WHERE "potlucks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mRecipe Create (2.1ms)[0m  [1m[32mINSERT INTO "recipes" ("potluck_id", "name", "description", "category") VALUES (?, ?, ?, ?)[0m  [["potluck_id", 2], ["name", "Chocolate Fudge Brownies"], ["description", "Brownies with fudge and sea salt caramal topping"], ["category", "dessert"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (60.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:19
