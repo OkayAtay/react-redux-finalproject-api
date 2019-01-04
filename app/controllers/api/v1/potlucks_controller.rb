@@ -6,6 +6,12 @@ class Api::V1::PotlucksController < ApplicationController
     render json: potlucks
   end
 
+  def show
+    potluck = Potluck.find(params[:id])
+
+    render json: potluck
+  end
+
   def create
     potluck = Potluck.build(potluck_params)
     potluck.save
