@@ -13,7 +13,7 @@ class Api::V1::PotlucksController < ApplicationController
   end
 
   def create
-    potluck = Potluck.build(potluck_params)
+    potluck = Potluck.create(potluck_params)
     potluck.save
 
     render json: potluck
